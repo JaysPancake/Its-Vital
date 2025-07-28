@@ -1,5 +1,26 @@
 # ItsVital
 
+ItsVital is a monitor and controller designed for EMS and medical simulation. This application is a vital tool for instructors to remotely control and monitor medical students, EMTs, paramedics, and nurses during training sessions.
+
+![GitHub License](https://img.shields.io/github/license/JaysPancake/Its-Vital?style=for-the-badge) [![Discord](https://img.shields.io/discord/1155608617370791979?style=for-the-badge)](https://discord.com/invite/KQaZb2TbQK) ![GitHub last commit](https://img.shields.io/github/last-commit/JaysPancake/Its-Vital?style=for-the-badge)
+
+
+
+## Features
+
+- Remote control capabilities for instructors
+- Real-time monitoring of trainees
+- User-friendly interface
+- Designed for medical simulation environments
+
+## Getting Started
+
+### Prerequisites
+
+- Web browser (latest version recommended)
+- Internet connection
+- Node.js installed on your machine
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
 
 ## Development server
@@ -57,3 +78,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/JaysPancake/Its-Vital?tab=readme-ov-file) file for details.
