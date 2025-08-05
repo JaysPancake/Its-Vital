@@ -1,13 +1,13 @@
 <mat-toolbar color="primary">
   <span>Its Vital</span>
   <span class="spacer"></span>
-  <button matIconButton (click)="toggleTheme()">
+  <button matTooltip="Change Theme" matIconButton (click)="toggleTheme()">
     <mat-icon>{{ theme() === 'light' ? 'dark_mode' : 'light_mode' }}</mat-icon>
   </button>
-  <button matIconButton>
-    <mat-icon>favorite</mat-icon>
+  <button matTooltip="View Source Code" matIconButton>
+    <mat-icon>code</mat-icon>
   </button>
-  <button matIconButton>
+  <button matTooltip="Share this Page" matIconButton>
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
