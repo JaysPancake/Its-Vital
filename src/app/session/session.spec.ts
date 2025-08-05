@@ -10,6 +10,7 @@ describe('Session', () => {
   let fixture: ComponentFixture<Session>;
 
   beforeEach(async () => {
+    localStorage.clear();
     await TestBed.configureTestingModule({
       imports: [Session, RouterTestingModule],
       providers: [
