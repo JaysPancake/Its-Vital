@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ActivatedRoute, convertToParamMap } from '@angular/router';
 
 import { Controls } from './controls';
+import { SessionService } from '../session.service';
 
 describe('Controls', () => {
   let component: Controls;
@@ -8,9 +11,13 @@ describe('Controls', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Controls]
+      imports: [Controls, RouterTestingModule],
+      providers: [
+        SessionService,
+        { provide: ActivatedRoute, useValue: { snapshot: { paramMap: convertToParamMap({ code: 'abc' }) } } }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(Controls);
     component = fixture.componentInstance;
