@@ -1,1 +1,9 @@
-<p>controls works!</p>
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <h2>Session Code: {{ code }}</h2>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Message</mat-label>
+      <input matInput [value]="message()" (input)="updateMessage($any($event.target).value)" />
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>
