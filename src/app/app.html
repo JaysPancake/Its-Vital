@@ -1,17 +1,35 @@
 <mat-toolbar color="primary">
-  <span>Its Vital</span>
+  <span>Its Vital | Home</span>
   <span class="spacer"></span>
-  <button matTooltip="Change Theme" matIconButton (click)="toggleTheme()">
+  <button matTooltip="Change the Theme" matIconButton (click)="toggleTheme()">
     <mat-icon>{{ theme() === 'light' ? 'dark_mode' : 'light_mode' }}</mat-icon>
-  </button>
-  <button matTooltip="View Source Code" matIconButton>
-    <mat-icon>code</mat-icon>
   </button>
   <button matTooltip="Share this Page" matIconButton>
     <mat-icon>share</mat-icon>
   </button>
+  <button matTooltip="View Source Code" matIconButton>
+    <mat-icon>code</mat-icon>
+  </button>
 </mat-toolbar>
 
-
+<h1>Its Vital</h1>
+<h2>A free virtual vital sign monitor for use in the classroom.</h2>
+<mat-card appearance="outlined">
+  <mat-card-header>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Session Code</mat-label>
+      <input matInput placeholder="#######-#######">
+    </mat-form-field>
+    <span>Input your session code above, click join to continue!</span>
+    <button matButton="filled">Join Session</button>
+    <mat-divider></mat-divider>
+    <span>Don't have a session to join? Create one now.</span>
+    <button matButton="filled">Create a Session</button>
+  </mat-card-content>
+</mat-card>
 
 <router-outlet />
+
+<footer>Created with <mat-icon>favorite</mat-icon> by <span href="https://github.com/JaysPancake">Jayden</span></footer>
