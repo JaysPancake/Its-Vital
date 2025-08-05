@@ -1,13 +1,24 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    MatButtonModule
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatDividerModule,
+    MatFormFieldModule
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
