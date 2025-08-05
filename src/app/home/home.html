@@ -1,0 +1,21 @@
+<div class="content">
+  <h1>Its Vital</h1>
+  <h2>A free virtual vital sign monitor for use in the classroom.</h2>
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Session Code</mat-label>
+        <input matInput placeholder="#######-#######" [value]="joinCode()" (input)="joinCode.set($any($event.target).value)" />
+      </mat-form-field>
+      <p>Input your session code above, click join to continue!</p>
+      <button mat-flat-button color="primary" class="full-width" (click)="joinSession()">
+        Join Session
+      </button>
+      <mat-divider></mat-divider>
+      <p>Don't have a session to join? Create one now.</p>
+      <button mat-stroked-button color="primary" class="full-width" (click)="createSession()">
+        Create a Session
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
