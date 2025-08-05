@@ -7,18 +7,15 @@
 @use '@angular/material' as mat;
 
 html {
+  // Default the application to the light theme.
   @include mat.theme((
     color: (
+      theme-type: light,
       primary: mat.$rose-palette,
       tertiary: mat.$red-palette,
     ),
-    typography: Roboto,
     density: 0,
   ));
-
-  // Default the application to a light color theme. This can be changed to
-  // `dark` to enable the dark color theme, or to `light dark` to defer to the
-  // user's system settings.
   color-scheme: light;
 
   // Set a default background, font and text colors for the application using
@@ -27,7 +24,26 @@ html {
   background-color: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
-}/* You can add global styles to this file, and also import other style files */
+}
+
+html.dark-theme {
+  // Apply the dark theme when the class is present on the root element.
+  @include mat.theme((
+    color: (
+      theme-type: dark,
+      primary: mat.$rose-palette,
+      tertiary: mat.$red-palette,
+    ),
+    density: 0,
+  ));
+  color-scheme: dark;
+
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+}
+
+/* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
