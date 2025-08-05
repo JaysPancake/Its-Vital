@@ -1,6 +1,9 @@
-<mat-toolbar style="background-color: brown;">
+<mat-toolbar color="primary">
   <span>Its Vital</span>
   <span class="spacer"></span>
+  <button matIconButton (click)="toggleTheme()">
+    <mat-icon>{{ theme() === 'light' ? 'dark_mode' : 'light_mode' }}</mat-icon>
+  </button>
   <button matIconButton>
     <mat-icon>favorite</mat-icon>
   </button>

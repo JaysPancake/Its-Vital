@@ -26,4 +26,24 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class App {
   protected readonly title = signal('Its-Vital');
+  protected readonly theme = signal<'light' | 'dark'>(this.getStoredTheme());
+
+  constructor() {
+    this.applyTheme(this.theme());
+  }
+
+  protected toggleTheme(): void {
+    this.theme.update((t) => (t === 'light' ? 'dark' : 'light'));
+    const current = this.theme();
+    localStorage.setItem('theme', current);
+    this.applyTheme(current);
+  }
+
+  private getStoredTheme(): 'light' | 'dark' {
+    return localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+  }
+
+  private applyTheme(theme: 'light' | 'dark'): void {
+    document.documentElement.classList.toggle('dark-theme', theme === 'dark');
+  }
 }
