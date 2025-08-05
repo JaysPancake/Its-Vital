@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     MatToolbarModule,
     MatDividerModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

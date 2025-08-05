@@ -9,16 +9,6 @@
   </button>
 </mat-toolbar>
 
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Join Code</mat-label>
-    <input matInput #message maxlength="32" placeholder="Code">
-    <mat-hint align="start">Get a code from a created session!</mat-hint>
-    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
-  </mat-form-field>
-</form>
 
-<button matButton>Join Session</button>
-<button matButton>Create a Session</button>
 
 <router-outlet />
